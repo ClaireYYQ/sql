@@ -57,6 +57,8 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 ```
 Your answer...
+Type 1 slowly changing dimensions will overwrite the existing address whenever a customer updates their information. The CUSTOMER_ADDRESS table would contain fields: address_id, customer_id, street, city, province, postal_code, and country.
+Type 2 slowly changing dimensions will retain the history of address changes by creating a new record row whenever a customer updates their address. The CUSTOMER_ADDRESS table would include fields: address_id, customer_id, street, city, province, postal_code, country, start_date_id, end_date_id, and is_current (True or False).
 ```
 
 ***
@@ -191,5 +193,12 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+Your thoughts...Vicki Boykis’ essay “Neural nets are just people all the way down” surfaces a central ethical conflict in AI development: the illusion that machine intelligence is autonomous, objective, and cleanly engineered, while in reality it relys on layers of human work that are often hidden, undervalued, or misunderstood. Framing the issue this way reveals two key problem areas, content moderation and data, which can then be extended to how AI systems deliver information
+
+First, content moderation illustrates the ethical cost of relying on human labor to make AI systems appear safe and functional. Behind many AI systems are workers tasked with reviewing and filtering harmful, explicit, or disturbing content so that models can learn what to block or avoid. This work is essential, yet it is frequently outsourced to low-paid contractors who must repeatedly engage with psychologically distressing material. The ethical issue here is not just that this labor is underpaid, but that it transfers emotional and mental harm onto vulnerable workers who contribute to create a smoother experience for end users.
+
+Second, there is the issue of data quality and honesty in labeling work, which connects to both bias and the possibility of workers cutting corners or even lying. Since AI systems depend heavily on labeled data, the reliability of that data becomes critical. However, many data workers are paid per task and are incentivized to complete work quickly rather than carefully. This creates a risk that annotations may be rushed, inconsistent, or even fabricated. Additionally, workers bring their own perspectives, cultural assumptions, and biases into the labeling process. This can result in datasets that reflect subjective or skewed interpretations of reality rather than objective truth.
+
+Overall, viewing AI through the lens of labor makes it clear that these systems are not independent sources of truth. They are reflections of human work that can be exploitative, inconsistent, or biased. By valuing the people behind the data, improving processes, and being honest about limitations, AI systems can become more reliable and fair. However, they will never be completely free from the human influences that shape them.
+
 ```
